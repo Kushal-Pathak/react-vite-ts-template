@@ -1,6 +1,6 @@
 # React + Vite + TypeScript Template
 
-A reusable frontend starter built with React, Vite, TypeScript, Tailwind CSS, shadcn/ui, ESLint, and Prettier.
+A reusable frontend starter for building modern React applications with React, Vite, TypeScript, Tailwind CSS, shadcn/ui, ESLint, and Prettier.
 
 ## Requirements
 
@@ -10,9 +10,14 @@ A reusable frontend starter built with React, Vite, TypeScript, Tailwind CSS, sh
 ## Getting Started
 
 ```bash
+git clone git@github.com:Kushal-Pathak/react-vite-ts-template.git
+cd react-vite-ts-template
 npm install
+cp .env.example .env.local
 npm run dev
 ```
+
+This project uses npm. Use npm consistently to avoid lockfile conflicts.
 
 ## Main Scripts
 
@@ -26,6 +31,8 @@ npm run format:check
 npm run typecheck
 npm run check
 ```
+
+Run `npm run check` before considering changes complete.
 
 ## Project Structure
 
@@ -46,18 +53,16 @@ src/
 
 The template follows a feature-first architecture.
 
+For details about folder responsibilities and architectural boundaries, see [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
+
 ## Environment Variables
 
 Copy `.env.example` to `.env.local` and provide local values.
 
-Never store secrets in `VITE_*` variables.
+Never store secrets, credentials, private keys, or other sensitive values in `VITE_*` variables because they are exposed to client-side code.
 
 ## Documentation
 
-- `docs/ARCHITECTURE.md`
-- `docs/CONVENTIONS.md`
-- `docs/DESIGN_SYSTEM.md`
-- `docs/DEVELOPMENT.md`
-- `docs/PROJECT_STATUS.md`
-- `docs/decisions/`
-- `AGENTS.md`
+- [Architecture](docs/ARCHITECTURE.md)
+- [Development Guide](docs/DEVELOPMENT.md)
+- [Agent Instructions](AGENTS.md)
